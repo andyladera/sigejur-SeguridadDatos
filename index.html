@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Eliminación de Cuenta - SIGEJUR</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2A4D80;
+            border-bottom: 2px solid #2A4D80;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2A4D80;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+        .step-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+        }
+        .step-list li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            background-color: #2A4D80;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #2A4D80;
+        }
+        .btn-email {
+            display: inline-block;
+            background-color: #2A4D80;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .btn-email:hover {
+            background-color: #1a365d;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85em;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Solicitud de Eliminación de Cuenta y Datos</h1>
+    <p>En <strong>SIGEJUR</strong>, valoramos su privacidad y sus derechos digitales. Si desea solicitar la baja de su cuenta de usuario, puede hacerlo siguiendo los pasos descritos a continuación. Esta acción inhabilitará su acceso al sistema.</p>
+
+    <div class="warning-box">
+        <strong>Nota Importante:</strong> Dado que SIGEJUR es un sistema de gestión jurídica institucional, la solicitud de baja implicará la <strong>revocación de acceso</strong> y la eliminación de credenciales de seguridad. Sin embargo, su <strong>identidad básica (Nombre y Email)</strong> se conservará vinculada a los documentos y resoluciones que usted haya procesado, para cumplir con las obligaciones de auditoría y trazabilidad legal de la institución.
+    </div>
+
+    <h2>Cómo solicitar la baja</h2>
+    <p>Para procesar su solicitud de baja e inhabilitación, siga estos pasos:</p>
+    
+    <ol class="step-list">
+        <li>Envíe un correo electrónico a nuestro equipo de soporte técnico.</li>
+        <li>Utilice el asunto: <strong>"SOLICITUD BAJA - [Su Nombre de Usuario/ID]"</strong>.</li>
+        <li>En el cuerpo del mensaje, confirme el correo electrónico asociado a la cuenta que desea dar de baja.</li>
+        <li>Nuestro equipo verificará su identidad y procederá con la inhabilitación en un plazo máximo de <strong>7 días hábiles</strong>.</li>
+    </ol>
+
+    <div style="text-align: center;">
+        <!-- REEMPLAZA EL CORREO AQUI ABAJO -->
+        <a href="mailto:soporte.sigejur@upt.pe?subject=SOLICITUD BAJA SIGEJUR" class="btn-email">Enviar Solicitud por Correo</a>
+    </div>
+
+    <h2>Detalle de Datos a Eliminar y Conservar</h2>
+    <p>Para cumplir con la transparencia requerida por Google Play, detallamos qué ocurre con su información tras la solicitud:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Dato</th>
+                <th>Acción</th>
+                <th>Periodo de Retención</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Información de Cuenta</strong><br><small>(Email, Nombre, ID de Firebase Auth)</small></td>
+                <td><span style="color: #f0ad4e; font-weight: bold;">SE CONSERVA</span><br><small>(Cuenta Inhabilitada)</small></td>
+                <td><strong>Indefinido.</strong> Se conserva para mantener la trazabilidad legal de quién gestionó los expedientes y resoluciones históricas.</td>
+            </tr>
+            <tr>
+                <td><strong>Credenciales y Tokens</strong><br><small>(Contraseñas, tokens de sesión)</small></td>
+                <td><span style="color: #d9534f; font-weight: bold;">SE ELIMINA</span></td>
+                <td>Inmediato. Se eliminan para impedir cualquier acceso futuro al sistema.</td>
+            </tr>
+            <tr>
+                <td><strong>Configuraciones de App</strong><br><small>(Preferencias locales del usuario)</small></td>
+                <td><span style="color: #d9534f; font-weight: bold;">SE ELIMINA</span></td>
+                <td>Inmediato.</td>
+            </tr>
+            <tr>
+                <td><strong>Documentos Jurídicos</strong><br><small>(Resoluciones, Decretos, Archivos PDF subidos)</small></td>
+                <td><span style="color: #f0ad4e; font-weight: bold;">SE CONSERVA</span></td>
+                <td>Indefinido (Obligación Legal Institucional). Permanecen en el acervo documentario de la institución.</td>
+            </tr>
+            <tr>
+                <td><strong>Logs de Auditoría</strong><br><small>(Registro de accesos por seguridad)</small></td>
+                <td><span style="color: #5bc0de; font-weight: bold;">RETENCIÓN TEMPORAL</span></td>
+                <td>90 días, luego se eliminan automáticamente.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>SIGEJUR - Universidad Privada de Tacna<br>
+        Escuela Profesional de Ingeniería de Sistemas</p>
+    </div>
+</div>
+
+</body>
+</html>
